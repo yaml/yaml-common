@@ -43,7 +43,7 @@ run() (
     return
   fi
 
-  if [[ ${RUN_OR_DOCKER-} == force* ]]; then
+  if [[ ${RUN_OR_DOCKER-} == force* || ${GITHUB_ACTIONS-} ]]; then
     run-docker "$@"
     return
   fi
